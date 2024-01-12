@@ -1,18 +1,14 @@
 <template>
   <!-- Start Header  -->
-    <div class="header">
-      <img src="~/assets/images/logo.png" alt="logo">
-      <h1>Echrili Store</h1>
-    </div>
+  <div class="header flex justify-center items-center m-10">
+    <img class="w-20" src="~/assets/images/logo.png" alt="Echrili Store">
+    <h1 class="text-2xl font-bold ml-5">Echrili Store</h1>
+  </div>
   <!-- End Header  -->
   <div class="flex flex-col justify-center">
     <div class="text-center mb-20">
-      <h1 class="py-10 text-3xl font-bold rounded-lg bg-brand md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-        متجر شريلي نافذتكم الالكترونية للتسوق من المتاجر العالمية </h1>
-
-      <span dir="rtl" class="mb-2 text-2xl rounded-lg bg-brand md:text-1xl bg-clip-text">ضع رابط المنتج الذي تريد شرائه من موقع AliExpress</span>
-       
-        
+      <h1 class="py-10 text-3xl font-bold rounded-lg bg-brand md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">متجر شريلي نافذتكم الالكترونية للتسوق من المتاجر العالمية</h1>
+      <span dir="rtl" class="mb-2 text-2xl rounded-lg bg-brand md:text-1xl bg-clip-text">ضع رابط المنتج الذي تريد شرائه من موقع AliExpress</span> 
     </div>
     <div class="container mx-auto flex flex-col items-center gap-y-10 md:gap-y-10 px-7">
       <!-- Input and button -->
@@ -190,169 +186,134 @@
 
   </div>
   <!-- Start Bot Telegram  -->
-
-<div class="bot-t text-center mt-4 flex flex-col items-center">
-  <span class="bot-text mb-5 font-bold text-1xl bg-[#22CF1B]	w-fit	 rounded-md ">أستخدم هذا البوت للحصول على اسعار  أقل </span>
-  
-   
-      <a href="https://t.me/Echrili_bot" ><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 256 256"><defs><linearGradient id="logosTelegram0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#2AABEE"/><stop offset="100%" stop-color="#229ED9"/></linearGradient></defs><path fill="url(#logosTelegram0)" d="M128 0C94.06 0 61.48 13.494 37.5 37.49A128.038 128.038 0 0 0 0 128c0 33.934 13.5 66.514 37.5 90.51C61.48 242.506 94.06 256 128 256s66.52-13.494 90.5-37.49c24-23.996 37.5-56.576 37.5-90.51c0-33.934-13.5-66.514-37.5-90.51C194.52 13.494 161.94 0 128 0"/><path fill="#FFF" d="M57.94 126.648c37.32-16.256 62.2-26.974 74.64-32.152c35.56-14.786 42.94-17.354 47.76-17.441c1.06-.017 3.42.245 4.96 1.49c1.28 1.05 1.64 2.47 1.82 3.467c.16.996.38 3.266.2 5.038c-1.92 20.24-10.26 69.356-14.5 92.026c-1.78 9.592-5.32 12.808-8.74 13.122c-7.44.684-13.08-4.912-20.28-9.63c-11.26-7.386-17.62-11.982-28.56-19.188c-12.64-8.328-4.44-12.906 2.76-20.386c1.88-1.958 34.64-31.748 35.26-34.45c.08-.338.16-1.598-.6-2.262c-.74-.666-1.84-.438-2.64-.258c-1.14.256-19.12 12.152-54 35.686c-5.1 3.508-9.72 5.218-13.88 5.128c-4.56-.098-13.36-2.584-19.9-4.708c-8-2.606-14.38-3.984-13.82-8.41c.28-2.304 3.46-4.662 9.52-7.072"/></svg></a>
-    
-  
+  <div class="bot-t text-center mt-4 flex flex-col items-center">
+    <span class="bot-text mb-5 font-bold text-1xl bg-[#22CF1B]	w-fit	 rounded-md ">إستعمل هذا البوت للحصول على أسعار أقل</span>
+    <a href="https://t.me/Echrili_Coupons" ><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 256 256"><defs><linearGradient id="logosTelegram0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#2AABEE"/><stop offset="100%" stop-color="#229ED9"/></linearGradient></defs><path fill="url(#logosTelegram0)" d="M128 0C94.06 0 61.48 13.494 37.5 37.49A128.038 128.038 0 0 0 0 128c0 33.934 13.5 66.514 37.5 90.51C61.48 242.506 94.06 256 128 256s66.52-13.494 90.5-37.49c24-23.996 37.5-56.576 37.5-90.51c0-33.934-13.5-66.514-37.5-90.51C194.52 13.494 161.94 0 128 0"/><path fill="#FFF" d="M57.94 126.648c37.32-16.256 62.2-26.974 74.64-32.152c35.56-14.786 42.94-17.354 47.76-17.441c1.06-.017 3.42.245 4.96 1.49c1.28 1.05 1.64 2.47 1.82 3.467c.16.996.38 3.266.2 5.038c-1.92 20.24-10.26 69.356-14.5 92.026c-1.78 9.592-5.32 12.808-8.74 13.122c-7.44.684-13.08-4.912-20.28-9.63c-11.26-7.386-17.62-11.982-28.56-19.188c-12.64-8.328-4.44-12.906 2.76-20.386c1.88-1.958 34.64-31.748 35.26-34.45c.08-.338.16-1.598-.6-2.262c-.74-.666-1.84-.438-2.64-.258c-1.14.256-19.12 12.152-54 35.686c-5.1 3.508-9.72 5.218-13.88 5.128c-4.56-.098-13.36-2.584-19.9-4.708c-8-2.606-14.38-3.984-13.82-8.41c.28-2.304 3.46-4.662 9.52-7.072"/></svg></a>
+  </div>
+  <!-- End Bot Telegram  -->
+  <!-- More Services  -->
+  <div class="container mx-auto my-5">
+  <div class="flex flex-col sm:flex-row items-center justify-between">
+    <div class="mb-5 sm:mb-0 text-center sm:text-left">
+      <img src="~/assets/images/services.jpg" alt="services" class="w-full h-auto sm:w-3/4">
+    </div>
+    <div dir="rtl" class="text mt-5 sm:mt-0 sm:ml-5 w-full sm:w-1/2">
+      <h1 class="font-bold text-xl sm:text-2xl mt-5 bg-blue-800 text-white p-2 rounded">يمكنك دوما التعرف على خدماتنا الاخرى :</h1>
+      <p class="font-bold mt-5 text-sm sm:text-base">
+        بالإضافة لخدمة الوساطة التجارية والخدماتية<br>
+        يقدم لكم متجر شريلي عدة خدمات أخرى أهمها:
+      </p>
+      <h3 class="mt-3 font-bold text-lg sm:text-xl bg-blue-200 rounded-md p-2 w-fit">انشاء المواقع وتصميم المتاجر الالكترونية</h3>
+      <h3 class="mt-3 font-bold text-lg sm:text-xl bg-blue-200 rounded-md p-2 w-fit">عمل اعلانات فايسبوك ممولة Sponsoring</h3>
+      <h3 class="mt-3 font-bold text-lg sm:text-xl bg-blue-200 rounded-md p-2 w-fit">بيع جميع قطع غيار السيارات الالمانية</h3>
+      <h3 class="mt-3 font-bold text-lg sm:text-xl bg-blue-200 rounded-md p-2 w-fit">خدمات Freelance متنوعة</h3>
+      <h3 class="mt-3 font-bold text-lg sm:text-xl bg-blue-200 rounded-md p-2 w-fit">بيع وشراء الارصدة المالية لمختلف البنوك والمحافظ الرقمية</h3>
+    </div>
+  </div>
 </div>
 
-  <!-- End Bot Telegram  -->
-
-
-
-  <!-- More Services  -->
-
-
-  <div class="container">
-        <div class="more-s flex items-center  justify-between   ">
-            <div class="img  ">
-                <img src="~/assets/images/services.jpg" alt="services" >
-            </div>
-            <div dir="rtl" class="text ">
-                <h1 class="font-bold text-3xl mt-5 bg-[#04017B] w-fit	 rounded text-white">ماهي خدماتنا الأ خرى ؟</h1>
-                <p  class="font-bold mt-5  ">بالاضافة لخدمة الوساطة التجارية والخدماتية<br> يقدم لكم متجر شريلي عدة خدمات اخرى اهمها : </p>
-                <h3 class="mt-5 font-bold text-2xl bg-[#9DE9EE] rounded-md  w-fit	 ">انشاء المواقع وتصميم المتاجر الالكترونية</h3>
-                <h3 class="mt-5 font-bold text-2xl bg-[#9DE9EE] rounded-md 	w-fit	 ">عمل اعلانات فايسبوك ممولة Sponsoring</h3>
-                <h3 class="mt-5 font-bold text-2xl bg-[#9DE9EE] rounded-md	w-fit	 ">بيع جميع قطع غيار السيارات الالمانية </h3>
-                <h3 class="mt-5 font-bold text-2xl bg-[#9DE9EE] rounded-md	w-fit	 ">خدمات Freelance متنوعة </h3>
-                <h3 class="mt-5 font-bold text-2xl bg-[#9DE9EE] rounded-md	w-fit	 ">بيع وشراء الارصدة المالية لمختلف البنوك والمحافظ الرقمية</h3>
-
-            </div>
-
-        </div>
-        
-  </div>
-
   <!-- End Services  -->
-
-
   <!-- جدول عمولة  -->
-  <div class="sid-title flex justify-center			 ">
-    <h1 class="mb-5 mt-20 font-bold text-3xl bg-[#22CF1B]	w-fit	rounded-md "> جدول العمولات</h1>
+  <div class="sid-title flex justify-center ">
+    <h1 class="font-bold text-3xl bg-[#22CF1B] p-2 w-fit rounded-md"> جدول العمولات</h1>
   </div>
-     
-  <div class="container">
+  
+  <div class="container mx-auto my-5">
     <div dir="rtl" class="flex justify-center	">
       <table class="table-auto w-4/5 ">
-  <thead class="bg-[#D0D0D0] ">
-    <tr>
-      <th >سعر بدولار </th>
-      <th>عمولة</th>
-      
-    </tr>
-  </thead>
-  <tbody class="bg-[#EEE7E7]">
-    <tr>
-      <td >تحت 3$</td>
-      <td>عمولة 100 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 3$ و 5$</td>
-      <td>عمولة 150 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 5$ و 11$</td>
-      <td>عمولة  300 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 11$ و 15$</td>
-      <td>عمولة  400 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 15$ و 18$</td>
-      <td>عمولة  500 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 18$ و 22$</td>
-      <td>عمولة  600 دج</td>
-
-    </tr>
-    <tr>
-      <td>بين 22$ و 25$</td>
-      <td>عمولة  700 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 25$ و 28$</td>
-      <td>عمولة  800 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 28$ و 31$</td>
-      <td>عمولة  900 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 31$ و 36$</td>
-      <td>عمولة  1000 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 36$ و 40$</td>
-      <td>عمولة  1200 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 40$ و 48$</td>
-      <td>عمولة  1300 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 48$ و 60$</td>
-      <td>عمولة  1400 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 60$ و 80$</td>
-      <td>عمولة  1500 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 80$ و 100$</td>
-      <td>عمولة  1800 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 100$ و 120$</td>
-      <td>عمولة  2200 دج</td>
-      
-    </tr>
-    <tr>
-      <td>بين 120$ و 160$</td>
-      <td>عمولة  2500 دج</td>
-      
-    </tr>
-    <tr>
-      <td>فوق 200$</td>
-      <td>عمولة  2900 دج</td>
-      
-    </tr>
-    
-  </tbody>
-</table>
+        <thead class="bg-[#D0D0D0] ">
+          <tr>
+            <th >سعر بدولار </th>
+            <th>عمولة</th>
+          </tr>
+        </thead>
+        <tbody class="bg-[#EEE7E7]">
+          <tr>
+            <td >تحت 3$</td>
+            <td>عمولة 100 دج</td>
+          </tr>
+          <tr>
+            <td>بين 3$ و 5$</td>
+            <td>عمولة 150 دج</td>
+          </tr>
+          <tr>
+            <td>بين 5$ و 11$</td>
+            <td>عمولة  300 دج</td>
+          </tr>
+          <tr>
+            <td>بين 11$ و 15$</td>
+            <td>عمولة  400 دج</td>
+          </tr>
+          <tr>
+            <td>بين 15$ و 18$</td>
+            <td>عمولة  500 دج</td>
+          </tr>
+          <tr>
+            <td>بين 18$ و 22$</td>
+            <td>عمولة  600 دج</td>
+          </tr>
+          <tr>
+            <td>بين 22$ و 25$</td>
+            <td>عمولة  700 دج</td>
+          </tr>
+          <tr>
+            <td>بين 25$ و 28$</td>
+            <td>عمولة  800 دج</td>
+          </tr>
+          <tr>
+            <td>بين 28$ و 31$</td>
+            <td>عمولة  900 دج</td>
+          </tr>
+          <tr>
+            <td>بين 31$ و 36$</td>
+            <td>عمولة  1000 دج</td>
+          </tr>
+          <tr>
+            <td>بين 36$ و 40$</td>
+            <td>عمولة  1200 دج</td>
+          </tr>
+          <tr>
+            <td>بين 40$ و 48$</td>
+            <td>عمولة  1300 دج</td>
+          </tr>
+          <tr>
+            <td>بين 48$ و 60$</td>
+            <td>عمولة  1400 دج</td>
+          </tr>
+          <tr>
+            <td>بين 60$ و 80$</td>
+            <td>عمولة  1500 دج</td>
+          </tr>
+          <tr>
+            <td>بين 80$ و 100$</td>
+            <td>عمولة  1800 دج</td>
+          </tr>
+          <tr>
+            <td>بين 100$ و 120$</td>
+            <td>عمولة  2200 دج</td>
+          </tr>
+          <tr>
+            <td>بين 120$ و 180$</td>
+            <td>عمولة  2500 دج</td>
+          </tr>
+          <tr>
+            <td>فوق 180$</td>
+            <td>عمولة قابلة للتفاوض</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-   
   </div>
   <!-- جدول عمولة  -->
   <!-- من نحن  -->
-  <div class="container">
-    
+  <div class="container mx-auto my-5">
     <div class="container">
-        <div class="sid-title flex justify-center			 ">
-    <h1 class="mb-5 mt-20 font-bold text-3xl bg-[#F6AA29]	w-fit	rounded-md ">  من نحن ؟</h1>
-    </div>
-        <div class="about">
+      <div class="sid-title flex justify-center">
+        <h1 class="mb-5 mt-20 font-bold text-3xl bg-[#F6AA29] p-2	w-fit	rounded-md">من نحن ؟</h1>
+      </div>
+      <div class="about">
         <div class="img">
-            <img src="~/assets/images/mark.jpg" alt="about">
+          <img src="~/assets/images/mark.jpg" alt="about">
         </div>
         <div dir="rtl" class="text">
             <p>✅ راك تحوس على وسيط خدماتي يشريلك من المتاجر الالكترونية في الخارج!! والدفع يكون بالدينار الجزائري 🇩🇿🤩
@@ -363,31 +324,29 @@
 ماعليك غير ترسلنا اسم المنتج او الرابط،، وخلي الباقي علينا😊👌
 حنا نشرولك ونقومو بعملية دفع جميع مشترياتك سواء بالاورو او الدولار.</p>
         </div>
-    </div>
+      </div>
     </div>
     <!-- Start Websit -->
-    <div class="container flex flex-col	 text-center items-center	 ">
-        <h1 class="font-bold text-3xl  "> : اهم المواقع التي ندعمها  </h1>
+    <div class="container flex flex-col text-center items-center	 ">
+        <h1 class="font-bold text-3xl"> : اهم المواقع التي ندعمها  </h1>
         <div class="">
             <img src="~/assets/images/brand.png" alt="brand">
         </div>
         <h1 class="font-bold text-2xl"> ...وغيرها الكثير</h1>
-    </div>
+      </div>
     <!-- End Websit  -->
 
     <!-- steps buy  -->
-
-
-    <div class="container 	">
+    <div class="container mx-auto my-5">
             <div class="info flex items-center justify-center">
                 <div class="text mt-5" dir="rtl">
-        <h1 class="font-bold text-3xl">خطوات الشراء </h1>
-        <ul class="font-bold mt-5 list-disc">
-            <li class="mt-5"> ادخل لموقع #Aliexpress او اي مواقع اخرى تدعم الشحن للجزائر🇩🇿</li>
-            <li class="mt-5">  اختر المنتج الذي يناسبك ثم ارسل لنا الرابط او لقطة شاشة</li>
-            <li class="mt-5">قدم لنا معلوماتك الشخصية ومحل سكنك حتى ندرجها في عنوان الشحن لدى البائع الاجنبي </li>
-            <li class="mt-5">قم بالدفع عبر الوسائل التي نوفرها CCP & BARIDIMOB</li>
-            <p> <span class="text-green-500">ملاحظة :</span> 
+                  <h1 class="font-bold text-3xl">خطوات الشراء </h1>
+                  <ul class="font-bold mt-5 list-disc">
+                    <li class="mt-5"> ادخل لموقع #Aliexpress او اي مواقع اخرى تدعم الشحن للجزائر🇩🇿</li>
+                    <li class="mt-5">  اختر المنتج الذي يناسبك ثم ارسل لنا الرابط او لقطة شاشة</li>
+                    <li class="mt-5">قدم لنا معلوماتك الشخصية ومحل سكنك حتى ندرجها في عنوان الشحن لدى البائع الاجنبي </li>
+                    <li class="mt-5">قم بالدفع عبر الوسائل التي نوفرها CCP & BARIDIMOB</li>
+                    <p> <span class="text-green-500">ملاحظة :</span> 
 كل المتاجر العالمية تفرض الدفع المسبق لاستكمال الشراء، وبالتالي اثناء الشراء من المواقع العالمية،<br> يصبح متجر شريلي عبارة عن وسيط خدماتي بينكم وبين البائعين الاجانب🌎</p>
             <li class="mt-5">بعد تأكيد الطلبية، نقوم بتزويدك بأرقام التتبع التي تسمح لك بمعرفة مكان مشترياتك وتاريخ وصولها.</li>
             <li class="mt-5">استلام المنتج يكون خلال مدة تتراوح بين 15 و 35 يوم.
@@ -398,16 +357,14 @@
     <div class="img1 w-2/5	">
         <img src="~/assets/images/buy.jpg" alt="buy">
     </div>
-            </div>
-    </div>
-
-
+  </div>
+</div>
     <!-- steps buy  -->
 
-    <div class="container">
+    <div class="container mx-auto my-5">
         <div class="Guarantee">
         <h1 class="font-bold text-3xl text-center mt-5">الضمانات</h1>
-        <p class="font-bold text-center mt-5  ">.99%   من الطرود تصل بشكل سليم لاصحابها 
+        <p dir="rtl" class="font-bold text-center mt-5  ">.99%   من الطرود تصل بشكل سليم لاصحابها 
 ونسبة 1% تكون غالبا في منتجات ثانوية غير مكلفة،<br> مثل اكسسوارات الهاتف او غيرها.
 وحتى اذا لم تصل،<br> تقوم Echrili Store بمعالجة الامر قصد تعويضكم.
 يمكنكم اكتشاف توثيقات المئات من زبائننا<br> عبر المنشور الاول المثبت على رأس الصفحة والخاص بتقييمات المتعاملين😍
@@ -421,7 +378,7 @@
 
     <h1 class="mb-5 mt-20 font-bold text-2xl text-center	">   لمزيد من المعلومات تواصلوا معنا عبر الصفحة او اتصلوا بنا على الارقام التالية </h1>
   <!-- من نحن  -->
-  <div class="container">
+  <div class="container mx-auto my-5">
     <div class="contacet flex justify-around">
         <div class="info ">
         <div class="email flex">
@@ -660,9 +617,9 @@ const calcPrice = () => {
       finalPrice = finalPrice * usdPrice + 2200
     } else if (totalPrice < 160) {
       finalPrice = finalPrice * usdPrice + 2500
-    } else if (totalPrice < 200) {
+    } else if (totalPrice < 180) {
       finalPrice = finalPrice * usdPrice + 2700
-    } else if (totalPrice > 200) {
+    } else if (totalPrice > 180) {
       finalPrice = finalPrice * usdPrice + 2900
     }
       //console.log(totalPrice)
@@ -956,29 +913,12 @@ useSeoMeta({
   }
 }
 .bg-svg-background {
-  background-image: url('/back.svg');
+  background-image: url('/background.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
 }
 
-/* Start Header  */
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 30px;
-}
-.header img {
-  width: 80px;
-}
-.header h1 {
-  font-size: 25px;
-  font-weight: bold;
-  margin-left: 20px;
-}
-
-/* End Header  */
 
 .more-s img {
     width: 700px;
@@ -1003,17 +943,15 @@ useSeoMeta({
       font-size: 15px;
     }
  }
- /* اضافة فراغ بين عناصر جدول  */
  table {
   border-collapse: separate;
-  border-spacing: 10px; /* قيمة الفراغ بين الخلايا */
+  border-spacing: 10px;
 }
 
 td, th {
-  padding: 10px; /* تعيين تباعد داخلي إذا كنت بحاجة إلى مزيد من التحكم في المسافات الداخلية للخلية */
-  border: 1px solid #ddd; /* إضافة حدود للخلايا للتأكد من وجود فراغ بينها */
+  padding: 10px;
+  border: 1px solid #ddd;
 }
- /* اضافة فراغ بين عناصر جدول  */
 
 /* Start About  */
 .about {
