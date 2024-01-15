@@ -583,10 +583,12 @@ watch(cardData, () => {
 const calcPrice = () => {
   if (!cardData.value || !cardData.value.variants || !cardData.value.variants.defAttr || !cardData.value.variants.propinfo) {
     if (cardData.value.variants == "No SKU property available") {
-      let finalPrice = cardData.value.discountPrice != "No discount Price" || cardData.value.price;
+      let finalPrice =  cardData.value.discountPrice != "No discount Price" && cardData.value.discountPrice || cardData.value.price;
       const shippingCost = cardData.value.shipping == 'Free Shipping' ? 0 : cardData.value.shipping;
-      let totalPrice = finalPrice + shippingCost;
       let usdPrice = 226;
+      let totalPrice = finalPrice * usdPrice;
+      
+      /*
     if (totalPrice < 3) {
       finalPrice = finalPrice * usdPrice + 100
     } else if (totalPrice < 5) {
@@ -626,10 +628,12 @@ const calcPrice = () => {
     } else if (totalPrice > 200) {
       finalPrice = finalPrice * usdPrice + 2900
     }
+    */
       //console.log(totalPrice)
       // Math.round((totalPrice + 50 / 2) / 50) * 50
       // (${cardData.value.shipping == 'Free Shipping' ? 'شحن مجاني' : 'مع الشحن'})
-      const one = Math.round((finalPrice + 50 / 2) / 50) * 50;
+      //const one = Math.round((totalPrice + 50 / 2) / 50) * 50;
+      const one = Math.ceil(totalPrice);
       return `${one * items.value} DZD`;
     }
     return 'Price not available';
@@ -646,10 +650,10 @@ const calcPrice = () => {
     let finalPrice = matchingPropInfo.price;
 
     const shippingCost = cardData.value.shipping == 'Free Shipping' ? 0 : cardData.value.shipping;
-    
-    let totalPrice = finalPrice + shippingCost;
-
     let usdPrice = 226;
+    let totalPrice = finalPrice * usdPrice;
+
+    /*
     if (totalPrice < 3) {
       finalPrice = finalPrice * usdPrice + 100
     } else if (totalPrice < 5) {
@@ -689,10 +693,12 @@ const calcPrice = () => {
     } else if (totalPrice > 200) {
       finalPrice = finalPrice * usdPrice + 2900
     }
-    //console.log(totalPrice)
+    */
+    console.log(totalPrice)
     // Math.round((totalPrice + 50 / 2) / 50) * 50
     // (${cardData.value.shipping == 'Free Shipping' ? 'شحن مجاني' : 'مع الشحن'})
-    const one = Math.round((finalPrice + 50 / 2) / 50) * 50;
+    //const one = Math.round((totalPrice + 50 / 2) / 50) * 50;
+    const one = Math.ceil(totalPrice);
     return `${one * items.value} DZD`;
   } else {
     return 'Price not available';
@@ -705,12 +711,13 @@ const calcShipping = () => {
       if (cardData.value.shipping == "Free Shipping") {
         return "(شحن مجاني)";
       } else {
-        const finalPrice = cardData.value.discountPrice != "No discount Price" || cardData.value.price;
+        //const finalPrice = cardData.value.discountPrice != "No discount Price" || cardData.value.price;
         let shippingCost = cardData.value.shipping;
         let usdPrice = 226;
-        let totalPrice = finalPrice + cardData.value.shipping * usdPrice;
+        let totalPrice = shippingCost * usdPrice;
 
-        return `${Math.round((totalPrice + 50 / 2) / 50) * 50} DZD (سعر الشحن)`;
+        //return `${Math.round((totalPrice + 50 / 2) / 50) * 50} DZD`;
+        return `${Math.ceil(totalPrice)} DZD`;
       }
     }
     return 'Price not available';
@@ -726,65 +733,67 @@ const calcShipping = () => {
   if (cardData.value.shipping == "Free Shipping") {
     return "(شحن مجاني)";
   } else {
-    const finalPrice = matchingPropInfo.price;
+    //const finalPrice = matchingPropInfo.price;
     let shippingCost = cardData.value.shipping;
     let usdPrice = 226;
-    let totalPrice = finalPrice + cardData.value.shipping * usdPrice;
-
-    return `${Math.round((totalPrice + 50 / 2) / 50) * 50} DZD`;
+    let totalPrice = shippingCost * usdPrice;
+    // Math.ceil(totalPrice)
+    //return `${Math.round((totalPrice + 50 / 2) / 50) * 50} DZD`;
+    return `${Math.ceil(totalPrice)} DZD`;
   }
 };
 
 const calcTotal = () => {
   if (!cardData.value || !cardData.value.variants || !cardData.value.variants.defAttr || !cardData.value.variants.propinfo) {
     if (cardData.value.variants == "No SKU property available") {
-      let finalPrice = cardData.value.discountPrice != "No discount Price" || cardData.value.price;
+      let finalPrice =  cardData.value.discountPrice != "No discount Price" && cardData.value.discountPrice || cardData.value.price;
       const shippingCost = cardData.value.shipping == 'Free Shipping' ? 0 : cardData.value.shipping;
       let totalPrice = finalPrice + shippingCost;
+      //console.log("total :", finalPrice)
       let usdPrice = 226;
-    if (totalPrice < 3) {
-      finalPrice = finalPrice * usdPrice + 100
+      if (totalPrice < 3) {
+        totalPrice = (totalPrice * usdPrice) + 100
     } else if (totalPrice < 5) {
-      finalPrice = finalPrice * usdPrice + 150
+      totalPrice = (totalPrice * usdPrice) + 150
     } else if (totalPrice < 11) {
-      finalPrice = finalPrice * usdPrice + 300
+      totalPrice = (totalPrice * usdPrice) + 300
     } else if (totalPrice < 15) {
-      finalPrice = finalPrice * usdPrice + 400
+      totalPrice = (totalPrice * usdPrice) + 400
     } else if (totalPrice < 18) {
-      finalPrice = finalPrice * usdPrice + 500
+      totalPrice = (totalPrice * usdPrice) + 500
     } else if (totalPrice < 22) {
-      finalPrice = finalPrice * usdPrice + 600
+      totalPrice = (totalPrice * usdPrice) + 600
     } else if (totalPrice < 25) {
-      finalPrice = finalPrice * usdPrice + 700
-    } else if (totalPrice < 28) {
-      finalPrice = finalPrice * usdPrice + 800
-    } else if (totalPrice < 31) {
-      finalPrice = finalPrice * usdPrice + 900
-    } else if (totalPrice < 36) {
-      finalPrice = finalPrice * usdPrice + 1000
-    } else if (totalPrice < 40) {
-      finalPrice = finalPrice * usdPrice + 1200
-    } else if (totalPrice < 48) {
-      finalPrice = finalPrice * usdPrice + 1300
-    } else if (totalPrice < 60) {
-      finalPrice = finalPrice * usdPrice + 1400
+      totalPrice = (totalPrice * usdPrice) + 700
+    } else if (totalPrice < 32) {
+      totalPrice = (totalPrice * usdPrice) + 800
+    } else if (totalPrice < 38) {
+      totalPrice = (totalPrice * usdPrice) + 900
+    } else if (totalPrice < 44) {
+      totalPrice = (totalPrice * usdPrice) + 1000
+    } else if (totalPrice < 62) {
+      totalPrice = (totalPrice * usdPrice) + 1200
+    } else if (totalPrice < 70) {
+      totalPrice = (totalPrice * usdPrice) + 1300
     } else if (totalPrice < 80) {
-      finalPrice = finalPrice * usdPrice + 1500
+      totalPrice = (totalPrice * usdPrice) + 1500
+    } else if (totalPrice < 90) {
+      totalPrice = (totalPrice * usdPrice) + 1700
     } else if (totalPrice < 100) {
-      finalPrice = finalPrice * usdPrice + 1800
+      totalPrice = (totalPrice * usdPrice) + 1900
     } else if (totalPrice < 120) {
-      finalPrice = finalPrice * usdPrice + 2200
+      totalPrice = (totalPrice * usdPrice) + 2100
     } else if (totalPrice < 160) {
-      finalPrice = finalPrice * usdPrice + 2500
+      totalPrice = (totalPrice * usdPrice) + 2300
     } else if (totalPrice < 200) {
-      finalPrice = finalPrice * usdPrice + 2700
+      totalPrice = (totalPrice * usdPrice) + 2500
     } else if (totalPrice > 200) {
-      finalPrice = finalPrice * usdPrice + 2900
+      totalPrice = (totalPrice * usdPrice) + 2900
     }
-      //console.log(totalPrice)
+      //console.log("total :", totalPrice)
       // Math.round((totalPrice + 50 / 2) / 50) * 50
       // (${cardData.value.shipping == 'Free Shipping' ? 'شحن مجاني' : 'مع الشحن'})
-      const one = Math.round((finalPrice + 50 / 2) / 50) * 50;
+      const one = Math.round((totalPrice + 50 / 2) / 50) * 50;
       return `${one * items.value} DZD`;
     }
     return 'Price not available';
@@ -806,43 +815,43 @@ const calcTotal = () => {
     let totalPrice = finalPrice + shippingCost;
     let usdPrice = 226;
     if (totalPrice < 3) {
-      totalPrice = totalPrice * usdPrice + 100
+      totalPrice = (totalPrice * usdPrice) + 100
     } else if (totalPrice < 5) {
-      totalPrice = totalPrice * usdPrice + 150
+      totalPrice = (totalPrice * usdPrice) + 150
     } else if (totalPrice < 11) {
-      totalPrice = totalPrice * usdPrice + 300
+      totalPrice = (totalPrice * usdPrice) + 300
     } else if (totalPrice < 15) {
-      totalPrice = totalPrice * usdPrice + 400
+      totalPrice = (totalPrice * usdPrice) + 400
     } else if (totalPrice < 18) {
-      totalPrice = totalPrice * usdPrice + 500
+      totalPrice = (totalPrice * usdPrice) + 500
     } else if (totalPrice < 22) {
-      totalPrice = totalPrice * usdPrice + 600
+      totalPrice = (totalPrice * usdPrice) + 600
     } else if (totalPrice < 25) {
-      totalPrice = totalPrice * usdPrice + 700
-    } else if (totalPrice < 28) {
-      totalPrice = totalPrice * usdPrice + 800
-    } else if (totalPrice < 31) {
-      totalPrice = totalPrice * usdPrice + 900
-    } else if (totalPrice < 36) {
-      totalPrice = totalPrice * usdPrice + 1000
-    } else if (totalPrice < 40) {
-      totalPrice = totalPrice * usdPrice + 1200
-    } else if (totalPrice < 48) {
-      totalPrice = totalPrice * usdPrice + 1300
-    } else if (totalPrice < 60) {
-      totalPrice = totalPrice * usdPrice + 1400
+      totalPrice = (totalPrice * usdPrice) + 700
+    } else if (totalPrice < 32) {
+      totalPrice = (totalPrice * usdPrice) + 800
+    } else if (totalPrice < 38) {
+      totalPrice = (totalPrice * usdPrice) + 900
+    } else if (totalPrice < 44) {
+      totalPrice = (totalPrice * usdPrice) + 1000
+    } else if (totalPrice < 62) {
+      totalPrice = (totalPrice * usdPrice) + 1200
+    } else if (totalPrice < 70) {
+      totalPrice = (totalPrice * usdPrice) + 1300
     } else if (totalPrice < 80) {
-      totalPrice = totalPrice * usdPrice + 1500
+      totalPrice = (totalPrice * usdPrice) + 1500
+    } else if (totalPrice < 90) {
+      totalPrice = (totalPrice * usdPrice) + 1700
     } else if (totalPrice < 100) {
-      totalPrice = totalPrice * usdPrice + 1800
+      totalPrice = (totalPrice * usdPrice) + 1900
     } else if (totalPrice < 120) {
-      totalPrice = totalPrice * usdPrice + 2200
+      totalPrice = (totalPrice * usdPrice) + 2100
     } else if (totalPrice < 160) {
-      totalPrice = totalPrice * usdPrice + 2500
+      totalPrice = (totalPrice * usdPrice) + 2300
     } else if (totalPrice < 200) {
-      totalPrice = totalPrice * usdPrice + 2700
+      totalPrice = (totalPrice * usdPrice) + 2500
     } else if (totalPrice > 200) {
-      totalPrice = totalPrice * usdPrice + 2900
+      totalPrice = (totalPrice * usdPrice) + 2900
     }
     //console.log(totalPrice)
     // Math.round((totalPrice + 50 / 2) / 50) * 50
