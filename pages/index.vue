@@ -257,47 +257,51 @@
             <td>عمولة  700 دج</td>
           </tr>
           <tr>
-            <td>بين 25$ و 28$</td>
+            <td>بين 25$ و 32$</td>
             <td>عمولة  800 دج</td>
           </tr>
           <tr>
-            <td>بين 28$ و 31$</td>
+            <td>بين 32$ و 38$</td>
             <td>عمولة  900 دج</td>
           </tr>
           <tr>
-            <td>بين 31$ و 36$</td>
+            <td>بين 38$ و 44$</td>
             <td>عمولة  1000 دج</td>
           </tr>
           <tr>
-            <td>بين 36$ و 40$</td>
+            <td>بين 44$ و 62$</td>
             <td>عمولة  1200 دج</td>
           </tr>
           <tr>
-            <td>بين 40$ و 48$</td>
+            <td>بين 62$ و 70$</td>
             <td>عمولة  1300 دج</td>
           </tr>
           <tr>
-            <td>بين 48$ و 60$</td>
-            <td>عمولة  1400 دج</td>
-          </tr>
-          <tr>
-            <td>بين 60$ و 80$</td>
+            <td>بين 70$ و 80$</td>
             <td>عمولة  1500 دج</td>
           </tr>
           <tr>
-            <td>بين 80$ و 100$</td>
-            <td>عمولة  1800 دج</td>
+            <td>بين 80$ و 90$</td>
+            <td>عمولة  1700 دج</td>
+          </tr>
+          <tr>
+            <td>بين 90$ و 100$</td>
+            <td>عمولة  1900 دج</td>
           </tr>
           <tr>
             <td>بين 100$ و 120$</td>
-            <td>عمولة  2200 دج</td>
+            <td>عمولة  2100 دج</td>
           </tr>
           <tr>
-            <td>بين 120$ و 180$</td>
+            <td>بين 120$ و 160$</td>
+            <td>عمولة  2300 دج</td>
+          </tr>
+          <tr>
+            <td>بين 160$ و 200$</td>
             <td>عمولة  2500 دج</td>
           </tr>
           <tr>
-            <td>فوق 180$</td>
+            <td>فوق 200$</td>
             <td>عمولة قابلة للتفاوض</td>
           </tr>
         </tbody>
@@ -597,29 +601,29 @@ const calcPrice = () => {
       finalPrice = finalPrice * usdPrice + 600
     } else if (totalPrice < 25) {
       finalPrice = finalPrice * usdPrice + 700
-    } else if (totalPrice < 28) {
+    } else if (totalPrice < 32) {
       finalPrice = finalPrice * usdPrice + 800
-    } else if (totalPrice < 31) {
+    } else if (totalPrice < 38) {
       finalPrice = finalPrice * usdPrice + 900
-    } else if (totalPrice < 36) {
+    } else if (totalPrice < 44) {
       finalPrice = finalPrice * usdPrice + 1000
-    } else if (totalPrice < 40) {
+    } else if (totalPrice < 62) {
       finalPrice = finalPrice * usdPrice + 1200
-    } else if (totalPrice < 48) {
+    } else if (totalPrice < 70) {
       finalPrice = finalPrice * usdPrice + 1300
-    } else if (totalPrice < 60) {
-      finalPrice = finalPrice * usdPrice + 1400
     } else if (totalPrice < 80) {
       finalPrice = finalPrice * usdPrice + 1500
+    } else if (totalPrice < 90) {
+      finalPrice = finalPrice * usdPrice + 1700
     } else if (totalPrice < 100) {
-      finalPrice = finalPrice * usdPrice + 1800
+      finalPrice = finalPrice * usdPrice + 1900
     } else if (totalPrice < 120) {
-      finalPrice = finalPrice * usdPrice + 2200
+      finalPrice = finalPrice * usdPrice + 2100
     } else if (totalPrice < 160) {
+      finalPrice = finalPrice * usdPrice + 2300
+    } else if (totalPrice < 200) {
       finalPrice = finalPrice * usdPrice + 2500
-    } else if (totalPrice < 180) {
-      finalPrice = finalPrice * usdPrice + 2700
-    } else if (totalPrice > 180) {
+    } else if (totalPrice > 200) {
       finalPrice = finalPrice * usdPrice + 2900
     }
       //console.log(totalPrice)
@@ -660,28 +664,28 @@ const calcPrice = () => {
       finalPrice = finalPrice * usdPrice + 600
     } else if (totalPrice < 25) {
       finalPrice = finalPrice * usdPrice + 700
-    } else if (totalPrice < 28) {
+    } else if (totalPrice < 32) {
       finalPrice = finalPrice * usdPrice + 800
-    } else if (totalPrice < 31) {
+    } else if (totalPrice < 38) {
       finalPrice = finalPrice * usdPrice + 900
-    } else if (totalPrice < 36) {
+    } else if (totalPrice < 44) {
       finalPrice = finalPrice * usdPrice + 1000
-    } else if (totalPrice < 40) {
+    } else if (totalPrice < 62) {
       finalPrice = finalPrice * usdPrice + 1200
-    } else if (totalPrice < 48) {
+    } else if (totalPrice < 70) {
       finalPrice = finalPrice * usdPrice + 1300
-    } else if (totalPrice < 60) {
-      finalPrice = finalPrice * usdPrice + 1400
     } else if (totalPrice < 80) {
       finalPrice = finalPrice * usdPrice + 1500
+    } else if (totalPrice < 90) {
+      finalPrice = finalPrice * usdPrice + 1700
     } else if (totalPrice < 100) {
-      finalPrice = finalPrice * usdPrice + 1800
+      finalPrice = finalPrice * usdPrice + 1900
     } else if (totalPrice < 120) {
-      finalPrice = finalPrice * usdPrice + 2200
+      finalPrice = finalPrice * usdPrice + 2100
     } else if (totalPrice < 160) {
-      finalPrice = finalPrice * usdPrice + 2500
+      finalPrice = finalPrice * usdPrice + 2300
     } else if (totalPrice < 200) {
-      finalPrice = finalPrice * usdPrice + 2700
+      finalPrice = finalPrice * usdPrice + 2500
     } else if (totalPrice > 200) {
       finalPrice = finalPrice * usdPrice + 2900
     }
