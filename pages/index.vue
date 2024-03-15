@@ -12,7 +12,7 @@
 </div>
   <!-- End Header  -->
   <div class="flex flex-col justify-center">
-    <div class="text-center mb-20">
+    <div class="text-center mb-5">
       <h1 class="py-10 text-3xl font-bold rounded-lg bg-brand md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">متجر شريلي نافذتكم الالكترونية للتسوق من المتاجر العالمية</h1>
       <span dir="rtl" class="mb-2 text-2xl rounded-lg bg-brand md:text-1xl bg-clip-text">ضع رابط المنتج الذي تريد شرائه من موقع AliExpress</span> 
     </div>
@@ -200,7 +200,13 @@
   <div class="bot-t text-center mt-4 flex flex-col items-center">
     <span class="bot-text mb-5 font-bold text-1xl bg-[#22CF1B]	w-fit	 rounded-md ">إستعمل هذا البوت للحصول على أسعار أقل</span>
     <a href="https://t.me/Echrili_Bot" ><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 256 256"><defs><linearGradient id="logosTelegram0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#2AABEE"/><stop offset="100%" stop-color="#229ED9"/></linearGradient></defs><path fill="url(#logosTelegram0)" d="M128 0C94.06 0 61.48 13.494 37.5 37.49A128.038 128.038 0 0 0 0 128c0 33.934 13.5 66.514 37.5 90.51C61.48 242.506 94.06 256 128 256s66.52-13.494 90.5-37.49c24-23.996 37.5-56.576 37.5-90.51c0-33.934-13.5-66.514-37.5-90.51C194.52 13.494 161.94 0 128 0"/><path fill="#FFF" d="M57.94 126.648c37.32-16.256 62.2-26.974 74.64-32.152c35.56-14.786 42.94-17.354 47.76-17.441c1.06-.017 3.42.245 4.96 1.49c1.28 1.05 1.64 2.47 1.82 3.467c.16.996.38 3.266.2 5.038c-1.92 20.24-10.26 69.356-14.5 92.026c-1.78 9.592-5.32 12.808-8.74 13.122c-7.44.684-13.08-4.912-20.28-9.63c-11.26-7.386-17.62-11.982-28.56-19.188c-12.64-8.328-4.44-12.906 2.76-20.386c1.88-1.958 34.64-31.748 35.26-34.45c.08-.338.16-1.598-.6-2.262c-.74-.666-1.84-.438-2.64-.258c-1.14.256-19.12 12.152-54 35.686c-5.1 3.508-9.72 5.218-13.88 5.128c-4.56-.098-13.36-2.584-19.9-4.708c-8-2.606-14.38-3.984-13.82-8.41c.28-2.304 3.46-4.662 9.52-7.072"/></svg></a>
-    <p class="text-xl" dir="rtl">للحصول على تجربة تسوق مثالية ننصحكم بتثبيت تطبيق <span class="font-bold">AliExpress</span> وتحويل عملة الموقع الى الاورو او الدولار</p>
+    <p class="text-xl p-2" dir="rtl">للحصول على تجربة تسوق مثالية ننصحكم بتثبيت تطبيق <span class="font-bold">AliExpress</span> وتحويل عملة الموقع الى الاورو او الدولار</p>
+  </div>
+
+  <div class="text-center mt-4 flex flex-col items-center">
+    <p class="text-xl font-bold p-3" dir="rtl">اذا مازال ماشريتش من هذي المتاجر، راك مراطي بزاف 👇</p>
+    <a href="https://linktr.ee/echrili_store"><h1 class="text-xl text-center text-[#2200CC] p-2">linktr.ee/echrili_store</h1></a>
+    <img src="~/assets/images/teaser.png" alt="services" class="w-80 h-auto lg:w-6/12">
   </div>
   <!-- End Bot Telegram  -->
   <!-- More Services  -->
@@ -388,7 +394,7 @@
 
     <h1 class="font-bold text-2xl text-center mt-5 text-green-500"> الشراء من المتاجر العالمية، ليست الخدمة الوحيدة التي نقدمها،،
 يمكنكم اكتشاف عدة خدمات اخرى عبر صفحتنا الرسمية📥</h1>
-<a href="https://www.facebook.com/CHRiLiStore"><h1 class="font-bold text-2xl text-center mt-5 text-[#F6AA29]" >ECHRILI STORE متجر شريلي</h1></a>
+<a href="https://www.facebook.com/CHRiLiStore"><h1 class="font-bold text-2xl text-center mt-5 text-[#2200CC]" >ECHRILI STORE متجر شريلي</h1></a>
     </div>
     </div>
 
@@ -399,7 +405,7 @@
         <div class="info ">
         <div class="email flex">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 256 193"><path fill="#4285F4" d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z"/><path fill="#34A853" d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798z"/><path fill="#EA4335" d="m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z"/><path fill="#FBBC04" d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945z"/><path fill="#C5221F" d="m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23z"/></svg>
-            <h1 class="ml-4 font-bold"><a   href = "mailto: CHRILIStore@gmail.com">CHRILIStore@gmail.com</a></h1>
+            <h1 class="ml-4 font-bold"><a   href = "mailto: EchriliStore@Outlook.com">EchriliStore@Outlook.com</a></h1>
         </div>
             <div class="phone flex">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48"><g fill="none" stroke="#000" stroke-linejoin="round" stroke-width="4"><path stroke-linecap="round" d="M28 20L41 7.5"/><path stroke-linecap="round" d="M28 7H41V20"/><path fill="#2F88FF" d="M14.3758 9.79424C15.1023 9.79424 15.7717 10.1883 16.1244 10.8235L18.5708 15.2303C18.8911 15.8073 18.9062 16.5052 18.611 17.0955L16.2542 21.8092C16.2542 21.8092 16.9372 25.3206 19.7956 28.179C22.6541 31.0374 26.1537 31.7086 26.1537 31.7086L30.8666 29.3522C31.4573 29.0568 32.1557 29.0721 32.7329 29.393L37.1522 31.85C37.7869 32.2028 38.1804 32.8719 38.1804 33.598V38.6715C38.1804 41.2552 35.7805 43.1213 33.3325 42.2952C28.3045 40.5987 20.4998 37.3685 15.553 32.4216C10.6061 27.4748 7.37586 19.6701 5.67934 14.6422C4.85332 12.1941 6.71941 9.79424 9.30306 9.79424H14.3758Z"/></g></svg>
