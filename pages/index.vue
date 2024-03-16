@@ -923,9 +923,9 @@ const searchClicked = async () => {
 
 useSeoMeta({
   title: 'Echrili Store',
-  ogTitle: 'Echrili Store | Shop from AliExpress using 🇩🇿 Dinar!',
-  description: 'Shop from AliExpress using 🇩🇿 Dinar!',
-  ogDescription: 'Shop from AliExpress using 🇩🇿 Dinar!',
+  ogTitle: 'Echrili Store | تسوق من المتاجر الصينية والعالمية بالدينار الجزائري!',
+  description: 'تسوق من المتاجر الصينية والعالمية بالدينار الجزائري',
+  ogDescription: 'تسوق من المتاجر الصينية والعالمية بالدينار الجزائري !',
   ogImage: 'https://i.ibb.co/8xnDMGG/Manfaat-Toko-Online.jpg',
 })
 
