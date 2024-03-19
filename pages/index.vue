@@ -186,7 +186,7 @@
         <!-- -->
         </div>
       </div>
-      <a href="https://web.facebook.com/profile.php?id=61557389585178">
+      <a href="https://www.facebook.com/EchriliStore1">
   <div role="alert" class="max-w-[300px] lg:max-w-[760px] p-2 bg-red-500 rounded-xl text-white leading-none lg:rounded-xl">
     <div class="flex flex-col items-start items-center">
       <span dir="ltr" class="flex rounded-full bg-white text-red-500 px-2 p-1 text-xs mb-2">هام</span>
