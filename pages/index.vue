@@ -6,9 +6,9 @@
     <h1 class="text-2xl font-bold ml-5">Echrili Store</h1>
   </div>
   -->
-  <div class="header flex flex-col justify-center items-center m-5">
-    <img class="w-90 lg:w-11/12" src="~/assets/images/logoramadan.png" alt="Echrili Store">
-    <img class="w-80 mt-3 lg:w-6/12" src="~/assets/images/front.png">
+  <div class="header flex flex-col justify-center items-center">
+    <img class="w-90 lg:w-11/12" src="~/assets/images/logotop.png" alt="Echrili Store">
+    <img class="w-80 lg:w-6/12" src="~/assets/images/support.png">
 </div>
   <!-- End Header  -->
   <div class="flex flex-col justify-center">
@@ -96,7 +96,7 @@
             <h2 class="text-xl font-bold text-gray-800">Total : {{ calcTotal() }}</h2>
           </div>
           <p class="text-center text-xs">سعر المنتج + الشحن * سعر الدولار + العمولة</p>
-          <p class="text-center text-white bg-[#424242] rounded-md mt-4" dir="rtl">لتاكيد عملية الشراء، التقط صورة Capture وارسلها لحسابنا في ميسانجر او واتساب</p>
+          <p class="text-center text-white bg-[#424242] rounded-md mt-4" dir="rtl">لتاكيد عملية الشراء، التقط صورة Capture مع إرفاق الرابط 🔗 وارسلها لحسابنا في ميسانجر 💬 او واتساب</p>
           <div class="flex justify-center space-x-7 mt-4">
                 <a href="https://m.me/CHRiLiStore" class="px-4 py-2 rounded-lg bg-blue-500 text-white font-bold hover:bg-blue-600 focus:ring-2 focus:ring-blue-400"> Messenger</a>
                 <a href="https://wa.me/+213656323285" class="px-4 py-2 rounded-lg bg-green-400 text-white font-bold hover:bg-green-500 focus:ring-2 focus:ring-blue-400"> WhatsApp</a>
@@ -117,7 +117,7 @@
             <div class="text-center absolute bottom-0 right-0">
               <h2 class="text-xl font-bold text-gray-800">Total : {{ calcTotal() }}</h2>
               <p class="text-xs">سعر المنتج + الشحن * سعر الدولار + العمولة</p>
-              <p class="text-center text-white bg-[#424242] rounded-md mt-4" dir="rtl">لتاكيد عملية الشراء، التقط صورة Capture وارسلها لحسابنا في ميسانجر او واتساب</p>
+              <p class="text-center text-white bg-[#424242] rounded-md mt-4" dir="rtl">لتاكيد عملية الشراء، التقط صورة Capture مع إرفاق الرابط 🔗 وارسلها لحسابنا في ميسانجر 💬 او واتساب</p>
               <div class="flex justify-center space-x-7 mt-4">
                 <a href="https://m.me/CHRiLiStore" class="px-4 py-2 rounded-lg bg-blue-500 text-white font-bold hover:bg-blue-600 focus:ring-2 focus:ring-blue-400"> Messenger</a>
                 <a href="https://wa.me/+213656323285" class="px-4 py-2 rounded-lg bg-green-400 text-white font-bold hover:bg-green-500 focus:ring-2 focus:ring-blue-400"> WhatsApp</a>
