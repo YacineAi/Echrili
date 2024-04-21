@@ -8,7 +8,7 @@
   -->
   <div class="header flex flex-col justify-center items-center m-5">
     <img class="w-90 lg:w-11/12" src="~/assets/images/logoramadan.png" alt="Echrili Store">
-    <img class="w-80 mt-3 lg:w-6/12" src="~/assets/images/ramdankarim.png">
+    <img class="w-80 mt-3 lg:w-6/12" src="~/assets/images/front.png">
 </div>
   <!-- End Header  -->
   <div class="flex flex-col justify-center">
