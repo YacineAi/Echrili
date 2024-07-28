@@ -84,7 +84,7 @@
                   </div>
                   <div v-else>
                     <!-- Disable the button and add a dashed border if available is 0 -->
-                    <button :disabled="isPropertyValueUnavailable(index, vIndex)" :class="getButtonClasses(index, vIndex)" class="bg-gray-200 rounded-lg px-3 py-1" @click="value.available !== 0 && setSelectedButton(index, vIndex)"> {{ value.skuPropertyTips }} </button>
+                    <button :disabled="isPropertyValueUnavailable(index, vIndex)" :class="getButtonClasses(index, vIndex)" class="bg-gray-200 rounded-lg px-3 py-1" @click="value.available !== 0 && setSelectedButton(index, vIndex)"> {{ value.propertyValueDefinitionName }} </button>
                   </div>
                 </template>
               </div>
@@ -174,7 +174,7 @@
                   </div>
                   <div v-else>
                     <!-- Disable the button and add a dashed border if available is 0 -->
-                    <button :disabled="isPropertyValueUnavailable(index, vIndex)" :class="getButtonClasses(index, vIndex)" class="bg-gray-200 rounded-lg px-3 py-1" @click="value.available !== 0 && setSelectedButton(index, vIndex)"> {{ value.skuPropertyTips }} </button>
+                    <button :disabled="isPropertyValueUnavailable(index, vIndex)" :class="getButtonClasses(index, vIndex)" class="bg-gray-200 rounded-lg px-3 py-1" @click="value.available !== 0 && setSelectedButton(index, vIndex)"> {{ value.propertyValueDefinitionName }} </button>
                   </div>
                 </template>
               </div>
@@ -474,9 +474,9 @@ const getName = (key, index) => {
     //console.log(skuPropertyId+":" + propertyValueId)
     const matchingProp = cardData.value.variants.props.find(prop => prop.skuPropertyId == skuPropertyId);
     if (matchingProp) {
-      const matchingValue = matchingProp.skuPropertyValues.find(value => value.propertyValueId == propertyValueId);
+      const matchingValue = matchingProp.skuPropertyValues.find(value => value.propertyValueIdLong == propertyValueId);
       if (matchingValue) {
-        return matchingValue.skuPropertyTips;
+        return matchingValue.propertyValueDefinitionName;
       }
     }
   return 'nonValue';
@@ -487,9 +487,9 @@ const getName = (key, index) => {
     //console.log(skuPropertyId+":" + propertyValueId)
     const matchingProp = cardData.value.variants.props.find(prop => prop.skuPropertyId == skuPropertyId);
     if (matchingProp) {
-      const matchingValue = matchingProp.skuPropertyValues.find(value => value.propertyValueId == propertyValueId);
+      const matchingValue = matchingProp.skuPropertyValues.find(value => value.propertyValueIdLong == propertyValueId);
       if (matchingValue) {
-        return matchingValue.skuPropertyTips;
+        return matchingValue.propertyValueDefinitionName;
       }
     }
   return 'nonValue';
@@ -501,7 +501,7 @@ const getName = (key, index) => {
 const isPropertyValueUnavailable = (index, vIndex) => {
   //console.log("vIndex : ", vIndex)
   const propPairs = cardData.value.variants.defAttr.split(';');
-  propPairs[index] = `${cardData.value.variants.props[index].skuPropertyId}:${cardData.value.variants.props[index].skuPropertyValues[vIndex].propertyValueId}`;
+  propPairs[index] = `${cardData.value.variants.props[index].skuPropertyId}:${cardData.value.variants.props[index].skuPropertyValues[vIndex].propertyValueIdLong}`;
   
   // Find matching propinfo based on attr
   const matchingPropInfo = cardData.value.variants.propinfo.find(prop => {
@@ -543,9 +543,9 @@ const setSelectedImage = (index, vIndex) => {
 
   selectedValues.value[index] = vIndex;
   const propPairs = cardData.value.variants.defAttr.split(';');
-  propPairs[index] = `${cardData.value.variants.props[index].skuPropertyId}:${cardData.value.variants.props[index].skuPropertyValues[vIndex].propertyValueId}`;
+  propPairs[index] = `${cardData.value.variants.props[index].skuPropertyId}:${cardData.value.variants.props[index].skuPropertyValues[vIndex].propertyValueIdLong}`;
   cardData.value.variants.defAttr = propPairs.join(';');
-  cardData.value.cover = cardData.value.variants.props[index].skuPropertyValues[vIndex].skuPropertyImagePath;
+  cardData.value.cover = cardData.value.variants.props[index].skuPropertyValues[vIndex].skuPropertyImageSummPath;
 };
 
 const setSelectedButton = (index, vIndex) => {
@@ -554,7 +554,7 @@ const setSelectedButton = (index, vIndex) => {
   selectedButtons.value[index] = vIndex;
 
   const propPairs = cardData.value.variants.defAttr.split(';');
-  propPairs[index] = `${cardData.value.variants.props[index].skuPropertyId}:${cardData.value.variants.props[index].skuPropertyValues[vIndex].propertyValueId}`;
+  propPairs[index] = `${cardData.value.variants.props[index].skuPropertyId}:${cardData.value.variants.props[index].skuPropertyValues[vIndex].propertyValueIdLong}`;
   cardData.value.variants.defAttr = propPairs.join(';');
 };
 
@@ -568,12 +568,12 @@ const initializeSelectedImagesAndButtons = () => {
       const matchingProp = cardData.value.variants.props[index];
 
       if (matchingProp) {
-        const matchingImageIndex = matchingProp.skuPropertyValues.findIndex(value => value.propertyValueId == propertyValueId);
+        const matchingImageIndex = matchingProp.skuPropertyValues.findIndex(value => value.propertyValueIdLong == propertyValueId);
         if (matchingImageIndex !== -1) {
           selectedValues.value[index] = matchingImageIndex;
         }
 
-        const matchingButtonIndex = matchingProp.skuPropertyValues.findIndex(value => value.propertyValueId == propertyValueId);
+        const matchingButtonIndex = matchingProp.skuPropertyValues.findIndex(value => value.propertyValueIdLong == propertyValueId);
         if (matchingButtonIndex !== -1) {
           selectedButtons.value[index] = matchingButtonIndex;
         }
@@ -588,12 +588,12 @@ const initializeSelectedImagesAndButtons = () => {
       const matchingProp = cardData.value.variants.props[index];
 
       if (matchingProp) {
-        const matchingImageIndex = matchingProp.skuPropertyValues.findIndex(value => value.propertyValueId == propertyValueId);
+        const matchingImageIndex = matchingProp.skuPropertyValues.findIndex(value => value.propertyValueIdLong == propertyValueId);
         if (matchingImageIndex !== -1) {
           selectedValues.value[index] = matchingImageIndex;
         }
 
-        const matchingButtonIndex = matchingProp.skuPropertyValues.findIndex(value => value.propertyValueId == propertyValueId);
+        const matchingButtonIndex = matchingProp.skuPropertyValues.findIndex(value => value.propertyValueIdLong == propertyValueId);
         if (matchingButtonIndex !== -1) {
           selectedButtons.value[index] = matchingButtonIndex;
         }
