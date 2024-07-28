@@ -78,9 +78,9 @@
               <p class="text-gray-700 font-semibold mb-2"> {{ variant.skuPropertyName }}: {{ getName(cardData.variants.defAttr, index) }} </p>
               <div class="flex flex-wrap gap-2">
                 <template v-for="(value, vIndex) in variant.skuPropertyValues" :key="vIndex">
-                  <div v-if="value.skuPropertyImageSummPath !== undefined">
+                  <div v-if="value.skuPropertyImagePath !== undefined">
                     <!-- If available is 0, make the image disabled -->
-                    <img v-if="value.skuPropertyImageSummPath" :src="value.skuPropertyImageSummPath" :class="getImgClasses(index, vIndex)" @click="setSelectedImage(index, vIndex)" class="w-12 h-12 object-cover rounded-lg"/>
+                    <img v-if="value.skuPropertyImagePath" :src="value.skuPropertyImagePath" :class="getImgClasses(index, vIndex)" @click="setSelectedImage(index, vIndex)" class="w-12 h-12 object-cover rounded-lg"/>
                   </div>
                   <div v-else>
                     <!-- Disable the button and add a dashed border if available is 0 -->
@@ -168,9 +168,9 @@
               <p class="text-gray-700 font-semibold mb-2"> {{ variant.skuPropertyName }}: {{ getName(cardData.variants.defAttr, index) }} </p>
               <div class="flex flex-wrap gap-2">
                 <template v-for="(value, vIndex) in variant.skuPropertyValues" :key="vIndex">
-                  <div v-if="value.skuPropertyImageSummPath !== undefined">
+                  <div v-if="value.skuPropertyImagePath !== undefined">
                     <!-- If available is 0, make the image disabled -->
-                    <img v-if="value.skuPropertyImageSummPath" :src="value.skuPropertyImageSummPath" :class="getImgClasses(index, vIndex)" @click="setSelectedImage(index, vIndex)" class="w-12 h-12 object-cover rounded-lg"/>
+                    <img v-if="value.skuPropertyImagePath" :src="value.skuPropertyImagePath" :class="getImgClasses(index, vIndex)" @click="setSelectedImage(index, vIndex)" class="w-12 h-12 object-cover rounded-lg"/>
                   </div>
                   <div v-else>
                     <!-- Disable the button and add a dashed border if available is 0 -->
@@ -545,7 +545,7 @@ const setSelectedImage = (index, vIndex) => {
   const propPairs = cardData.value.variants.defAttr.split(';');
   propPairs[index] = `${cardData.value.variants.props[index].skuPropertyId}:${cardData.value.variants.props[index].skuPropertyValues[vIndex].propertyValueIdLong}`;
   cardData.value.variants.defAttr = propPairs.join(';');
-  cardData.value.cover = cardData.value.variants.props[index].skuPropertyValues[vIndex].skuPropertyImageSummPath;
+  cardData.value.cover = cardData.value.variants.props[index].skuPropertyValues[vIndex].skuPropertyImagePath;
 };
 
 const setSelectedButton = (index, vIndex) => {
