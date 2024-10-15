@@ -618,7 +618,7 @@ const calcPrice = () => {
     if (cardData.value.variants == "No SKU property available") {
       let finalPrice =  cardData.value.discountPrice != "No discount Price" && cardData.value.discountPrice || cardData.value.price;
       const shippingCost = cardData.value.shipping == 'Free Shipping' ? 0 : cardData.value.shipping;
-      let usdPrice = 232;
+      let usdPrice = 238;
       let totalPrice = finalPrice * usdPrice;
       
       /*
@@ -683,7 +683,7 @@ const calcPrice = () => {
     let finalPrice = matchingPropInfo.price;
 
     const shippingCost = cardData.value.shipping == 'Free Shipping' ? 0 : cardData.value.shipping;
-    let usdPrice = 232;
+    let usdPrice = 238;
     let totalPrice = finalPrice * usdPrice;
 
     /*
@@ -746,7 +746,7 @@ const calcShipping = () => {
       } else {
         //const finalPrice = cardData.value.discountPrice != "No discount Price" || cardData.value.price;
         let shippingCost = cardData.value.shipping;
-        let usdPrice = 232;
+        let usdPrice = 238;
         let totalPrice = shippingCost * usdPrice;
 
         //return `${Math.round((totalPrice + 50 / 2) / 50) * 50} DZD`;
@@ -768,7 +768,7 @@ const calcShipping = () => {
   } else {
     //const finalPrice = matchingPropInfo.price;
     let shippingCost = cardData.value.shipping;
-    let usdPrice = 232;
+    let usdPrice = 238;
     let totalPrice = shippingCost * usdPrice;
     // Math.ceil(totalPrice)
     //return `${Math.round((totalPrice + 50 / 2) / 50) * 50} DZD`;
@@ -783,7 +783,7 @@ const calcTotal = () => {
       const shippingCost = cardData.value.shipping == 'Free Shipping' ? 0 : cardData.value.shipping;
       let totalPrice = finalPrice + shippingCost;
       //console.log("total :", finalPrice)
-      let usdPrice = 232;
+      let usdPrice = 238;
       if (totalPrice < 3) {
         totalPrice = (totalPrice * usdPrice) + 100
     } else if (totalPrice < 5) {
@@ -846,7 +846,7 @@ const calcTotal = () => {
     const shippingCost = cardData.value.shipping == 'Free Shipping' ? 0 : cardData.value.shipping;
     
     let totalPrice = finalPrice + shippingCost;
-    let usdPrice = 232;
+    let usdPrice = 238;
     if (totalPrice < 3) {
       totalPrice = (totalPrice * usdPrice) + 100
     } else if (totalPrice < 5) {
