@@ -784,43 +784,43 @@ const calcTotal = () => {
       let totalPrice = finalPrice + shippingCost;
       //console.log("total :", finalPrice)
       let usdPrice = 245;
-      if (totalPrice < 3) {
+      if (totalPrice < 2) {
         totalPrice = (totalPrice * usdPrice) + 100
-    } else if (totalPrice < 5) {
+    } else if (totalPrice < 4) {
       totalPrice = (totalPrice * usdPrice) + 150
-    } else if (totalPrice < 11) {
+    } else if (totalPrice < 10) {
       totalPrice = (totalPrice * usdPrice) + 300
-    } else if (totalPrice < 15) {
+    } else if (totalPrice < 13) {
       totalPrice = (totalPrice * usdPrice) + 400
-    } else if (totalPrice < 18) {
+    } else if (totalPrice < 16) {
       totalPrice = (totalPrice * usdPrice) + 500
-    } else if (totalPrice < 22) {
+    } else if (totalPrice < 19) {
       totalPrice = (totalPrice * usdPrice) + 600
-    } else if (totalPrice < 25) {
+    } else if (totalPrice < 22) {
       totalPrice = (totalPrice * usdPrice) + 700
-    } else if (totalPrice < 32) {
+    } else if (totalPrice < 25) {
       totalPrice = (totalPrice * usdPrice) + 800
-    } else if (totalPrice < 38) {
+    } else if (totalPrice < 28) {
       totalPrice = (totalPrice * usdPrice) + 900
-    } else if (totalPrice < 44) {
+    } else if (totalPrice < 32) {
       totalPrice = (totalPrice * usdPrice) + 1000
-    } else if (totalPrice < 62) {
+    } else if (totalPrice < 37) {
       totalPrice = (totalPrice * usdPrice) + 1200
-    } else if (totalPrice < 70) {
+    } else if (totalPrice < 43) {
       totalPrice = (totalPrice * usdPrice) + 1300
-    } else if (totalPrice < 80) {
+    } else if (totalPrice < 48) {
       totalPrice = (totalPrice * usdPrice) + 1500
-    } else if (totalPrice < 90) {
-      totalPrice = (totalPrice * usdPrice) + 1700
-    } else if (totalPrice < 100) {
-      totalPrice = (totalPrice * usdPrice) + 1900
-    } else if (totalPrice < 120) {
-      totalPrice = (totalPrice * usdPrice) + 2100
-    } else if (totalPrice < 160) {
+    } else if (totalPrice < 56) {
+      totalPrice = (totalPrice * usdPrice) + 1600
+    } else if (totalPrice < 66) {
+      totalPrice = (totalPrice * usdPrice) + 1800
+    } else if (totalPrice < 76) {
+      totalPrice = (totalPrice * usdPrice) + 2000
+    } else if (totalPrice < 88) {
       totalPrice = (totalPrice * usdPrice) + 2300
-    } else if (totalPrice < 200) {
+    } else if (totalPrice < 100) {
       totalPrice = (totalPrice * usdPrice) + 2500
-    } else if (totalPrice > 200) {
+    } else if (totalPrice > 100) {
       totalPrice = (totalPrice * usdPrice) + 2900
     }
       //console.log("total :", totalPrice)
@@ -847,43 +847,43 @@ const calcTotal = () => {
     
     let totalPrice = finalPrice + shippingCost;
     let usdPrice = 245;
-    if (totalPrice < 3) {
+    if (totalPrice < 2) {
       totalPrice = (totalPrice * usdPrice) + 100
-    } else if (totalPrice < 5) {
+    } else if (totalPrice < 4) {
       totalPrice = (totalPrice * usdPrice) + 150
-    } else if (totalPrice < 11) {
+    } else if (totalPrice < 10) {
       totalPrice = (totalPrice * usdPrice) + 300
-    } else if (totalPrice < 15) {
+    } else if (totalPrice < 13) {
       totalPrice = (totalPrice * usdPrice) + 400
-    } else if (totalPrice < 18) {
+    } else if (totalPrice < 16) {
       totalPrice = (totalPrice * usdPrice) + 500
-    } else if (totalPrice < 22) {
+    } else if (totalPrice < 19) {
       totalPrice = (totalPrice * usdPrice) + 600
-    } else if (totalPrice < 25) {
+    } else if (totalPrice < 22) {
       totalPrice = (totalPrice * usdPrice) + 700
-    } else if (totalPrice < 32) {
+    } else if (totalPrice < 25) {
       totalPrice = (totalPrice * usdPrice) + 800
-    } else if (totalPrice < 38) {
+    } else if (totalPrice < 28) {
       totalPrice = (totalPrice * usdPrice) + 900
-    } else if (totalPrice < 44) {
+    } else if (totalPrice < 32) {
       totalPrice = (totalPrice * usdPrice) + 1000
-    } else if (totalPrice < 62) {
+    } else if (totalPrice < 37) {
       totalPrice = (totalPrice * usdPrice) + 1200
-    } else if (totalPrice < 70) {
+    } else if (totalPrice < 43) {
       totalPrice = (totalPrice * usdPrice) + 1300
-    } else if (totalPrice < 80) {
+    } else if (totalPrice < 48) {
       totalPrice = (totalPrice * usdPrice) + 1500
-    } else if (totalPrice < 90) {
-      totalPrice = (totalPrice * usdPrice) + 1700
-    } else if (totalPrice < 100) {
-      totalPrice = (totalPrice * usdPrice) + 1900
-    } else if (totalPrice < 120) {
-      totalPrice = (totalPrice * usdPrice) + 2100
-    } else if (totalPrice < 160) {
+    } else if (totalPrice < 56) {
+      totalPrice = (totalPrice * usdPrice) + 1600
+    } else if (totalPrice < 66) {
+      totalPrice = (totalPrice * usdPrice) + 1800
+    } else if (totalPrice < 76) {
+      totalPrice = (totalPrice * usdPrice) + 2000
+    } else if (totalPrice < 88) {
       totalPrice = (totalPrice * usdPrice) + 2300
-    } else if (totalPrice < 200) {
+    } else if (totalPrice < 100) {
       totalPrice = (totalPrice * usdPrice) + 2500
-    } else if (totalPrice > 200) {
+    } else if (totalPrice > 100) {
       totalPrice = (totalPrice * usdPrice) + 2900
     }
     //console.log(totalPrice)
